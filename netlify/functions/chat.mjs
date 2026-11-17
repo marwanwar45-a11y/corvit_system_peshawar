@@ -25,7 +25,7 @@ function json(status, body) {
 // https://api.dify.ai/v1, so the bare dify.ai domain is mapped there automatically.
 // For self-hosted Dify, set DIFY_BASE_URL to e.g. https://your-host/v1.
 function resolveBaseUrl() {
-  let base = (process.env.DIFY_BASE_URL || "https://dify.ai").trim().replace(/\/+$/, "");
+  let base = (process.env.DIFY_BASE_URL || "https://api.dify.ai/v1").trim().replace(/\/+$/, "");
   if (/^https?:\/\/(www\.)?dify\.ai$/i.test(base)) {
     base = "https://api.dify.ai/v1";
   }
